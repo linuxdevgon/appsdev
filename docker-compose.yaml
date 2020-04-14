@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+  flask-app-service:
+    build:
+      context: ./app
+    command: /usr/local/bin/gunicorn -w 2 -b :8000 app:app
+
+    ports:
+      - "9999:8000"
