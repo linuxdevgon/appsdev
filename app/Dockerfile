@@ -8,4 +8,4 @@ WORKDIR /app
 ADD . .
 
 RUN pip install -r requirements.txt
-CMD ["gunicorn"  , "-b", "0.0.0.0:8000", "app:app"]
+CMD gunicorn app:app --bind 0.0.0.0:8000 --reload
