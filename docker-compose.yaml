@@ -3,7 +3,7 @@ services:
   flask-app-service:
     build:
       context: ./app
-    command: /usr/local/bin/gunicorn -w 2 -b :8000 app:app
+#    command: /usr/local/bin/gunicorn -w 2 -b :8000 app:app
 
     ports:
       - "8000:8000"
